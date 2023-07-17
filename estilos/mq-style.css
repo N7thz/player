@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+:root {
+    --color01: #2c2c2c;
+    --color02: #444;
+    --color03: #f0f8ff;
+    --color04: #e1e7ec;
+    --color05: #1f26875e;
+}
+
+/* Pagina Mobile*/
+@media screen and (max-width: 768px) {
+    section {
+        width: 95vw;
+        height: 97vh;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    section img {
+        width: 420px;
+    }
+
+    #title {
+        font-size: 1.3em;
+    }
+
+    #play {
+        width: 95%;
+        height: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        bottom: 100px;
+    }
+
+    #play div:nth-child(2) {
+        background-color: transparent;
+        padding: 20px;
+        border-radius: 50%;
+        border: 3px solid var(--color05);
+    }
+
+    #play div:nth-child(2):hover {
+        border: 3px solid var(--color02);
+        color: var(--color02);
+    }
+
+    #play i {
+        color: var(--color05);
+        font-size: 2.5em;
+    }
+
+    #play i:hover {
+        color: var(--color02);
+        scale: .7;
+    }
+
+    .controls {
+        margin-bottom: 200px;
+    }
+
+    .controls i {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    section {
+        width: 50vw;
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    section {
+        height: 70vh;
+        width: 60vw;
+    }
+
+    section img {
+        width: 500px;
+    }
+
+    #title {
+        text-align: center;
+        font-size: 1.5em;
+    }
+}

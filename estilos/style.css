@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font: normal 1em 'VT323', monospace;
+    box-sizing: border-box;
+}
+
+:root {
+    --color01: #2c2c2c;
+    --color02: #444;
+    --color03: #f0f8ff;
+    --color04: #e1e7ec;
+    --color05: #1f26875e;
+}
+
+section {
+    animation: quadro .7s ease-in-out alternate;
+    transition: 1s;
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color03);
+    box-shadow: 0 8px 32px 0 var(--color05);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid #ffffff2e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section img {
+    animation: img .9s ease-in-out;
+    width: 325px;
+    height: 325px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 var(--color05);
+}
+
+#title {
+    animation: title 1s ease-in-out .7s both;
+    width: 100%;
+    opacity: 0;
+}
+
+#title h1 {
+    font-size: 2em;
+    margin-left: 20px;
+}
+
+#title h2 {
+    font-size: 1.2em;
+    margin-left: 20px;
+    color: var(--color02);
+}
+
+#play {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+.controls i {
+    font-size: 1.5em;
+    color: var(--color02);
+}
+
+.controls i:hover {
+    cursor: pointer;
+    color: var(--color05);
+    transform: scale(1.4);
+}
+
+.controls a {
+    text-decoration: none;
+}
+
+#progress {
+    appearance: none;
+    width: 90%;
+    height: 6px;
+    background-color: var(--color04);
+    border-radius:4px;
+    margin: 40px 0;
+    cursor: grab;
+}
+
+#progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--color05);
+    border-radius: 50%;
+    background-color: var(--color03);
+}
+
+.hearth {
+    color: #f73030 !important;
+}
+
+/*
+    Animations
+*/
+
+@keyframes img {
+    from {
+        transform: scale(10);
+        opacity: .1;
+    } 
+
+    20% {
+        transform: scale(5);
+        opacity: .5;
+    }
+}
+
+@keyframes title {
+    to {
+        opacity: 1;
+    }
+}
+

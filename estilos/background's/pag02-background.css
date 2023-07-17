@@ -1,0 +1,15 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff73;
+    background: url(../../imgs/chainsaw-man-op-anime.webp) no-repeat left top;
+    background-size: 100%;
+    backdrop-filter: blur( 10px );
+}
+
+@media screen and (max-width:768px) {
+    body {
+        background-position: top center;
+        background-size: 150%;
+    }
+}
